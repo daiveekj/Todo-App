@@ -1,0 +1,140 @@
+@charset "ISO-8859-1";
+    
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	/* background: linear-gradient(135deg, #153677, #4e085f); */
+	margin: 0;
+	padding: 0;
+    height: 725px;
+    background-image:url("https://cdn.dribbble.com/users/110372/screenshots/14350130/media/6992b458f1b3cdcbca69e8170469fa82.png?resize=1000x750&vertical=center");
+    backdrop-filter: blur(2px);
+}
+
+#main {
+	max-width: 400px;
+	margin: 50px auto;
+	background: rgba(7, 7, 7, 0.441);
+	padding: 20px;
+	border-radius: 5px;
+    height: 450px;
+    
+}
+
+h1 {
+	text-align: center;
+	color: rgb(233, 231, 238);
+    margin-right: 120px;
+    position: relative;
+    top: 20px;
+    font-weight: 5px;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+form {
+	text-align: center;
+}
+
+fieldset {
+	border: none;
+	/* padding: 5px; */
+	border-radius: 5px;
+	width: 90%;
+	margin-left: 15px;
+	height: 250px;
+}
+
+legend {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+table {
+	width: 100%;
+}
+
+th {
+	text-align: left;
+	padding: 5px;
+}
+
+input {
+	width: 300px;
+	padding: 15px;
+	margin-bottom: 5px;
+	box-sizing: border-box;
+	border-radius: 7px;
+	outline: none;
+	border: none;
+	height: 45px;
+	position: relative;
+	left: 20px;
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}
+::placeholder
+{
+    color: rgba(222, 218, 218, 0.825);
+}
+
+
+button {
+	padding: 10px;
+    background-color:whitesmoke;
+	color:red;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	/* margin-left:200px; */
+}
+
+
+button:hover {
+    background-color: rgba(254, 204, 4, 0.86);
+}
+
+a {
+	text-decoration: none;
+}
+
+button[type="button"] {
+	background-color: #2196F3;
+	color: #fff;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+
+
+button[type="button"]:hover {
+	background-color: #0b7dda;
+}
+#signup
+{
+ margin-left: 95px;
+ margin-top: 10px;
+ background-color: rgba(216, 34, 6, 0.86);
+}
+
+
+#login {
+	position: relative;
+	left: 70px;
+    height: 40px;
+    width: 80px;
+}
+button[type="reset"] {
+	background-color: #ccc;
+	color: #333;
+	position: relative;
+    right: 120px;
+    
+    height: 39px;
+    width: 80px;
+}
