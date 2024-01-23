@@ -1,13 +1,21 @@
-@charset "ISO-8859-1";
-    
-body {
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+ <link rel="stylesheet" href="./Login.css">
+ <style type="text/css">
+ body {
 	font-family: Arial, Helvetica, sans-serif;
 	/* background: linear-gradient(135deg, #153677, #4e085f); */
 	margin: 0;
 	padding: 0;
     height: 725px;
     background-image:url("https://cdn.dribbble.com/users/110372/screenshots/14350130/media/6992b458f1b3cdcbca69e8170469fa82.png?resize=1000x750&vertical=center");
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(3px);
 }
 
 #main {
@@ -19,7 +27,12 @@ body {
     height: 450px;
     
 }
-
+h6
+{
+    position: relative;
+    top: 30px;
+    right: 280px;
+}
 h1 {
 	text-align: center;
 	color: rgb(233, 231, 238);
@@ -72,13 +85,15 @@ input {
 	height: 45px;
 	position: relative;
 	left: 20px;
-    background-color: grey;
+    background-color: transparent;
     color: white;
     cursor: pointer;
+    border: none;
+    border-bottom: 2px solid red;
 }
 ::placeholder
 {
-    color: rgba(222, 218, 218, 0.825);
+    color: #b3dbff;
 }
 
 
@@ -118,7 +133,7 @@ button[type="button"]:hover {
 #signup
 {
  margin-left: 95px;
- margin-top: 10px;
+ margin-top: 20px;
  background-color: rgba(216, 34, 6, 0.86);
 }
 
@@ -128,13 +143,61 @@ button[type="button"]:hover {
 	left: 70px;
     height: 40px;
     width: 80px;
+    top: 10px;
 }
 button[type="reset"] {
 	background-color: #ccc;
 	color: #333;
 	position: relative;
     right: 120px;
-    
+    top: 10px;
     height: 39px;
     width: 80px;
 }
+h2
+{
+position: relative;
+top:10px;
+right:47px;
+}
+
+ 
+ </style>
+
+</head>
+
+<body>
+	<div id="main">
+		<h2 style="color: red">${fail}</h2>
+		<h1>Todo Login</h1>
+		<h2 style="color: green">${pass}</h2>
+		<!-- action is address where the values are carried to  -->
+		<form action="login" method="post">
+			<fieldset>
+				<table>
+					<tr>
+						<!-- Name attribute is Complusory to carry value  -->
+						<th><input type="email" name="email" placeholder="example@gmail.com"></th>
+						<th><h6 style="color: red">${email}</h6></th>
+					</tr>
+					<tr>
+						<!-- Name attribute is Complusory to carry value  -->
+						<th><input type="password" name="password" placeholder="enter the password"></th>
+						<th><h6 style="color: red">${password}</h6></th>
+					</tr>
+					<tr>
+						<!-- Clicking this button will carry the values to action Location  -->
+						<th><button id="login"	>Login</button></th>
+						<th><button type="reset" id="reset">Cancel</button></th>
+					</tr>
+					<tr>
+						<!-- This is for Loading Signup Page -->
+						<th colspan="2"><a href="signup"><button type="button" id="signup">Click to Create Account</button></a></th>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+	</div>
+</body>
+
+</html>

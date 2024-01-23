@@ -43,6 +43,7 @@ h1
 fieldset
 {
     height: 600px;
+    border:2px solid #ff9999
 
 }
 legend
@@ -69,7 +70,7 @@ input {
 }
 ::placeholder
 {
-    color: white;
+    color: #b3dbff;
 }
 
 input[type="text"]
@@ -205,7 +206,7 @@ button[type="reset"]
 					<tr>
 						<!-- <th>Email:</th> -->
 						<!-- Name attribute is Complusory to carry value  -->
-						<th><input type="email" name="email" required placeholder="enter your Email"></th>
+						<th><input type="email" name="email" required placeholder="example@gmail.com"></th>
 						<th><h6 style="color:red" id="email">${email}</h6></th>
 					</tr>
 					<tr>

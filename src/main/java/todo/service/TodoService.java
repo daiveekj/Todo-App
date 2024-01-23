@@ -47,7 +47,7 @@ public class TodoService {
 		List<TodoUser> list = dao.findByEmail(email);
 		if (list.isEmpty()) {
 			map.put("email", "* Incorrect Email");
-			return "Login";
+			return "index";
 		} else {
 			if (password.equals(AES.decrypt(list.get(0).getPassword(), "123"))) {
 				session.setAttribute("todouser", list.get(0));
@@ -57,7 +57,7 @@ public class TodoService {
 				return "TodoHome";
 			} else {
 				map.put("password", "* Incorrect Password");
-				return "Login";
+				return "index";
 			}
 		}
 	}
@@ -66,7 +66,7 @@ public class TodoService {
 		TodoUser user = (TodoUser) session.getAttribute("todouser");
 		if (user == null) {
 			map.put("fail", "Invalid Session");
-			return "Login";
+			return "index";
 		} else {
 			map.put("list", dao.fetchAllTask(user.getId()));
 			return "TodoHome";
@@ -76,14 +76,14 @@ public class TodoService {
 	public String logout(HttpSession session, ModelMap map) {
 		session.invalidate();
 		map.put("pass", "Logout Success");
-		return "Login";
+		return "index";
 	}
 
 	public String addTask(HttpSession session, ModelMap map) {
 		TodoUser user = (TodoUser) session.getAttribute("todouser");
 		if (user == null) {
 			map.put("fail", "Invalid Session");
-			return "Login";
+			return "index";
 		} else {
 			return "AddTask";
 		}
@@ -93,7 +93,7 @@ public class TodoService {
 		TodoUser user = (TodoUser) session.getAttribute("todouser");
 		if (user == null) {
 			map.put("fail", "Invalid Session");
-			return "Login";
+			return "index";
 		} else {
 			task.setCreatedTime(LocalDateTime.now());
 			task.setUser(user);
@@ -109,7 +109,7 @@ public class TodoService {
 		TodoUser user = (TodoUser) session.getAttribute("todouser");
 		if (user == null) {
 			map.put("fail", "Invalid Session");
-			return "Login";
+			return "index";
 		} else {
 			TodoTask task = dao.fetchTaskById(id);
 			task.setStatus(true);
@@ -124,7 +124,7 @@ public class TodoService {
 		TodoUser user = (TodoUser) session.getAttribute("todouser");
 		if (user == null) {
 			map.put("fail", "Invalid Session");
-			return "Login";
+			return "index";
 		} else {
 			TodoTask task = dao.fetchTaskById(id);
 			dao.delete(task);
@@ -138,7 +138,7 @@ public class TodoService {
 		TodoUser user = (TodoUser) session.getAttribute("todouser");
 		if (user == null) {
 			map.put("fail", "Invalid Session");
-			return "Login";
+			return "index";
 		} else {
 			TodoTask task = dao.fetchTaskById(id);
 			map.put("task", task);
@@ -150,7 +150,7 @@ public class TodoService {
 		TodoUser user = (TodoUser) session.getAttribute("todouser");
 		if (user == null) {
 			map.put("fail", "Invalid Session");
-			return "Login";
+			return "index";
 		} else {
 			task.setUser(user);
 			task.setCreatedTime(LocalDateTime.now());

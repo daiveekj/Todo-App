@@ -27,6 +27,7 @@ body, h1, h2, p, table {
 body {
 	font-family: Arial, sans-serif;
 	background-color: #6b2f2f;
+	height: 87vh;
 }
 
 #AddTask {
@@ -59,6 +60,7 @@ fieldset {
 
 legend {
 	font-weight: bold;
+	font-size:25px;
 	color: rgb(204, 49, 49);
 }
 
@@ -86,7 +88,7 @@ input {
 }
 
 ::placeholder {
-	color: rgba(255, 255, 255, 0.89);
+	color: #b3dbff;
 }
 
 button {
@@ -99,6 +101,7 @@ button {
 	position: relative;
 	left: 240px;
 	width: 80px;
+	border: none;
 }
 
 button[type="reset"] {
@@ -107,6 +110,7 @@ button[type="reset"] {
 	position: relative;
 	left: 100px;
 	width: 80px;
+	border:none;
 }
 
 #back {

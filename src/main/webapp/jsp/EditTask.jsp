@@ -39,7 +39,7 @@ form {
 }
 
 fieldset {
-    border: 1px solid #ccc;
+    border: 2px solid #ff9999;
     padding: 10px;
     border-radius: 5px;
 }
@@ -145,7 +145,7 @@ button>img
 				</table>
 			</fieldset>
 		</form>
-		<br> <br> <a href="home"><button id="back"><img src="https://www.clker.com/cliparts/2/v/Z/A/g/2/back-button-md.png" height="50px" width="50px"></button></a>
+		<br> <br> <a href="home"><button id="back"><img src="https://www.clker.com/cliparts/2/v/Z/A/g/2/back-button-md.png" title="Back-button" height="50px" width="80px"></button></a>
 	</div>
 </body>
 </html>

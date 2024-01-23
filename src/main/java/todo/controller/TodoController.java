@@ -21,7 +21,7 @@ public class TodoController {
 
 	@GetMapping({ "/", "/login" })
 	public String loadLogin() {
-		return "Login";
+		return "index";
 	}
 
 	@GetMapping("/signup")
