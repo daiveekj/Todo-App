@@ -35,7 +35,7 @@ public class TodoService {
 			if (list.isEmpty()) {
 				dao.save(user);
 				map.put("pass", "Account Created Success");
-				return "Login";
+				return "index";
 			} else {
 				map.put("email", "* Email Should be Unique");
 				return "Signup";

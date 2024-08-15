@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 
 import lombok.Data;
 
-@Data
+
 @Entity
 public class TodoTask {
 	@Id
@@ -23,4 +23,54 @@ public class TodoTask {
 	
 	@ManyToOne
 	TodoUser user;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public LocalDateTime getCreatedTime() {
+		return createdTime;
+	}
+
+	public void setCreatedTime(LocalDateTime createdTime) {
+		this.createdTime = createdTime;
+	}
+
+	public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+
+	public TodoUser getUser() {
+		return user;
+	}
+
+	public void setUser(TodoUser user) {
+		this.user = user;
+	}
+	
+	
 }

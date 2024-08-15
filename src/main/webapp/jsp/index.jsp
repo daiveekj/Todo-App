@@ -15,7 +15,7 @@
 	padding: 0;
     height: 725px;
     background-image:url("https://cdn.dribbble.com/users/110372/screenshots/14350130/media/6992b458f1b3cdcbca69e8170469fa82.png?resize=1000x750&vertical=center");
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(10px);
 }
 
 #main {
